@@ -7,6 +7,7 @@ This a small mideterm game project of introduction to programming 1. More functi
 #Functions Available NOW:
 
 Movement:
+
 left and right arrow: Move 
 space: Jump
 

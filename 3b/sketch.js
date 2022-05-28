@@ -35,7 +35,7 @@ function setup()
 	gameChar_x = width/2;
 	gameChar_y = floorPos_y;
 
-    treePos_x = 800;
+        treePos_x = 800;
 	treePos_y = 432;
 
 	canyon = {
@@ -61,7 +61,7 @@ function setup()
 		width: 50
 	}
 
-    cloud2 = { 
+        cloud2 = { 
 		x_pos: 720,
 		y_pos: 70,
 		width: 60
@@ -81,13 +81,13 @@ function draw()
 	fill(0,155,0);
 	rect(0, floorPos_y, width, height - floorPos_y); //draw some green ground
     
-    //Cloud1
+  	//Cloud1
 	fill(255, 255, 255);
 	ellipse(cloud1.x_pos, cloud1.y_pos, cloud1.width*7/5, cloud1.width*68/50);
 	ellipse(cloud1.x_pos-30, cloud1.y_pos, cloud1.width, cloud1.width);
 	ellipse(cloud1.x_pos+30, cloud1.y_pos, cloud1.width, cloud1.width);
     
-    //Cloud2
+   	//Cloud2
 	fill(255, 255, 255);
 	ellipse(cloud2.x_pos, cloud2.y_pos, cloud2.width*7/5, cloud2.width*68/50);
 	ellipse(cloud2.x_pos-30, cloud2.y_pos, cloud2.width, cloud2.width);
@@ -111,8 +111,7 @@ function draw()
 	vertex(mountain.x_pos + 280, mountain.y_pos+50);
 	endShape();
 
-    //Tree
-    //Tree
+   	//Tree
 	//trunk
 	fill(139, 69, 19);
 	rect(treePos_x, treePos_y - 105, 40, 105);
@@ -123,8 +122,7 @@ function draw()
 	// triangle(815, 267, 925, 267, 870, 197);
 	triangle(treePos_x - 35, treePos_y - 165, treePos_x + 75, treePos_y - 165, treePos_x + 20, treePos_y - 235);
 
-    //draw the canyon
-    //Canyon
+   	//Canyon
 	fill(100, 155, 255);
 	rect(canyon.x_pos, 432, canyon.width, 144);
 	fill(65 ,105, 255);
@@ -159,6 +157,7 @@ function draw()
 	//the game character
 	if(isLeft && isFalling)
 	{
+		// jumping-left
 		// body
 		fill(120);
 		ellipse(gameChar_x, gameChar_y - 22, 30, 35);
@@ -193,7 +192,7 @@ function draw()
 	}
 	else if(isRight && isFalling)
 	{
-		// add your jumping-right code
+		// jumping-right
 		// body
 		fill(120);
 		ellipse(gameChar_x, gameChar_y - 22, 30, 35);
@@ -228,7 +227,7 @@ function draw()
 	}
 	else if(isLeft)
 	{
-		// add your walking left code
+		// walking left 
 		// legs
 		fill(0);
 		rect(gameChar_x - 15, gameChar_y - 6, 30, 8);
@@ -258,6 +257,7 @@ function draw()
 	}
 	else if(isRight)
 	{
+		// walking right
 		// legs
 		fill(0);
 		rect(gameChar_x - 15, gameChar_y - 6, 30, 8);
@@ -287,7 +287,7 @@ function draw()
 	}
 	else if(isFalling || isPlummeting)
 	{
-		// add your jumping facing forwards code
+		// jumping facing forwards
 		// body
 		fill(120);
 		ellipse(gameChar_x, gameChar_y - 22, 30, 35);
@@ -319,7 +319,7 @@ function draw()
 	}
 	else
 	{
-		// add your standing front facing code
+		// standing front facing 
 		// legs
 		fill(0);
 		rect(gameChar_x - 15, gameChar_y - 6, 30, 8);
@@ -349,7 +349,7 @@ function draw()
 	}
     
 	///////////INTERACTION CODE//////////
-	//Put conditional statements to move the game character below here
+	//move the game character
 	if(isLeft == true)
 	{
 		gameChar_x -= 2;
@@ -394,7 +394,6 @@ function keyPressed()
 			gameChar_y -= 100;
 		}
 	}
-	//open up the console to see how these work
 	console.log("keyPressed: " + key);
 	console.log("keyPressed: " + keyCode);
 }
@@ -415,4 +414,3 @@ function keyReleased()
 	console.log("keyReleased: " + key);
 	console.log("keyReleased: " + keyCode);
 }
-v

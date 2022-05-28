@@ -9,7 +9,8 @@ This a small mideterm game project of introduction to programming 1. More functi
 Movement:
 
 left and right arrow: Move 
+
 space: Jump
 
-Reminder
-cherry blossom is collectable, but beaware of canyon...
+Reminder:
+Cherry blossom is collectable, but beaware of canyon...
